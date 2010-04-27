@@ -1,0 +1,10 @@
+#$LOAD_PATH.insert 0, "/home/thisiscalliope/rubygems/lib"
+#ENV['RUBYLIB'] = "/home/thisiscalliope/rubygems/lib"
+
+#require '/home/thisiscalliope/rubygems/lib/rubygems.rb'
+
+require "config/environment" 
+
+use Rails::Rack::LogTailer 
+use Rails::Rack::Static 
+run ActionController::Dispatcher.new 

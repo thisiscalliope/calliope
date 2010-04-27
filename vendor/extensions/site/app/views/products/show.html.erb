@@ -1,0 +1,38 @@
+<% @body_id = 'product-details' %>
+<div id="product-images">
+  <div id="main-image">
+    <%= render 'image' -%>
+  </div>
+  <div id="thumbnails">
+    <%= render 'thumbnails', :product => @product -%>
+  </div>
+</div>
+
+<div id="product-description">
+  <h1><%= @product.name %></h1>
+  <% hook :product_description do %>
+    <%= product_description(@product) rescue t("product_has_no_description") %>
+  <% end %>
+  <p class='prices'><%= product_price(@product) %></p>
+  <% if @product.has_variants? %>  
+    <ul id="variant-thumbnails" class="thumbnails">
+      <% @variants.select { |v| v.available? }.each do |v|
+          v.images.each do |i| %>
+            <li>
+              <%= link_to(image_tag(i.attachment.url(:mini)), i.attachment.url(:product)) %>
+              <span style='display:none' class='meta'><%= variant_options v %></span>
+            </li>
+        <% end %>
+      <% end %>
+    </ul>
+    <div style='clear:both'>&nbsp;</div>
+  <% end %>
+  <% hook :product_properties do %>
+    <%= render 'properties' %>
+  <% end %>
+  <% hook :cart_form do %>
+  <div id="cart-form">
+    <%= render 'cart_form' %>
+  </div>
+<% end %>
+</div>

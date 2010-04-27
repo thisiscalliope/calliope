@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<% hook :inside_head do %>
+  <%= render :partial => 'shared/head'%>
+<% end %>
+</head>
+
+<body class="two-col">
+  
+  <div <%= %( id="#{@wrapper_id}") if @wrapper_id %>id="wrapper" class="container">  
+	  <div id="header">
+	  	<div id="login-bar">
+		  <ul id="nav-bar">
+			<%= render 'shared/nav_bar' %>
+		  </ul>
+		</div>
+	    <div id="logo">
+			<%= logo %>
+		</div>
+	  </div>  
+    <div id="sidebar">
+      <%= render :partial => 'shared/navigation' %>
+    </div>
+
+    <div id="content">
+      <% if flash[:notice] %>
+      <div class="flash notice"><%= flash[:notice] %></div>
+      <% end %>
+      <% if flash[:error] %>
+      <div class="flash errors"><%= flash[:error] %></div>
+      <% end %>
+      <%= yield %>
+    </div>
+    <%= render :partial => 'shared/footer'%>
+  </div>
+</body>
+</html>

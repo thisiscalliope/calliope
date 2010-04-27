@@ -1,0 +1,9 @@
+<ul>
+  <li><%= link_to "Headbands", "/products/headband", :class => ('active' if @product && 'headband' == @product.name.downcase) %></li>
+  <% %w(accessories women girls boys).each do |cat| %>
+    <li><%= link_to cat.titleize, "/t/categories/#{cat}", :class => ('active' if @taxon && cat == @taxon.name.downcase) %></li>
+  <% end %>
+  <li>FAQ</li>
+  <li><%=link_to "About", "/bio.html" %></li>
+  <li>Contact</li>
+</ul>
