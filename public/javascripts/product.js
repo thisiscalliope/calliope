@@ -6,7 +6,7 @@ var add_image_handlers = function() {
     $('ul.thumbnails li').removeClass('selected');
     $(this).parent('li').addClass('selected');
     // Show meta information below
-    $('#product-images span.meta').remove();
+    $('#product-images div.meta').remove();
     $(this).next().clone().insertAfter('#main-image').show();
     $('#main-image img').attr('src', $(this).attr('href').replace('mini', 'product'));
     $('#main-image img').attr('src', $("#main-image").data('selectedThumb'));

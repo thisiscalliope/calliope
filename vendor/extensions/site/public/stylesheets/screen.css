@@ -265,7 +265,7 @@ div.container {
   padding: 20px;
   align: center;
   margin:0 auto;
-  width: 1200px;
+  width: 1000px;
 }
 
 div.container#wrapper_home {
@@ -431,6 +431,7 @@ ul#nav-bar {
   padding: 0;
   position: relative;
   vertical-align: top;
+  top: -70px;
 }
 ul#nav-bar li {
   float: left;
@@ -695,7 +696,7 @@ ul.thumbnails li.selected { border-color: #999999; }
 #product-images {
   display: inline;
   float: left;
-  width: 370px;
+  width: 500px;
   margin-left: 15px;
 }
 #product-images h4 {
@@ -712,11 +713,8 @@ ul.thumbnails li.selected { border-color: #999999; }
 #product-description {
   display: inline;
   float: right;
-  width: 310px;
-  margin-right: 10px;
+  width: 300px;
   padding-right: 24px;
-  margin-right: 25px;
-  border-right: 1px solid #eeeeee;
 }
 #product-description p {
   color: #532720;

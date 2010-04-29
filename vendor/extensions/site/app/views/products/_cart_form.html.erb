@@ -1,30 +1,26 @@
 <% form_for :order, :url => orders_url do |f| %>
 <% hook :inside_product_cart_form do %>
-  <div id="product-variants">
-    <h3>Select your size</h3>
-    <select name="fabrics[<%= @product.id %>]" >
-      <option value=""></option>
-      <% if @product.has_variants? %>
-        <% @product.variants.active.each do |v| %>
-          <% next if v.option_values.empty? || (!v.in_stock && !Spree::Config[:show_zero_stock_products]) %>
-          <% next if !v.in_stock && !Spree::Config[:allow_backorders] %>
-          <option value="<%=v.id %>"><%= variant_options v %>
-            <% if variant_price_diff v %> <%= variant_price_diff v %> <% end %>
-          </option>
-        <% end %>
-      <% end %>
-    </select>
-    </div>  
-  <% if @product.has_stock? || Spree::Config[:allow_backorders] %>
-    <div>
-      Quantity:
-      <%= text_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"),
-        1, :class => "title", :size => 3 %>
-      &nbsp;
+
+  <% if product_price(@product) %>
+    <% hook :product_price do %>
+      <p class="prices">
+        <%= t("price") %>
+        <br />
+        <span class="price selling update"><%= product_price(@product) %></span>
+      </p>
+    <% end %>
+  <% end %>
+
+  <% if @product.has_variants? %>
+    <div id="product-variants">
+      <%= render :partial => 'selects', :locals => {:f => f} %>
     </div>
-	<div>
-		<%= image_submit_tag '/images/btn_addtocart.gif' %>
-	</div>
+  <% end%>
+  <% if @product.has_stock? || Spree::Config[:allow_backorders] %>
+    <%= text_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"),
+      1, :class => "title", :size => 3 %>
+    &nbsp;
+    <%= image_submit_tag '/images/btn_addtocart.gif' %>
   <% else %>
     <%= content_tag('strong', t('out_of_stock')) %>
   <% end %>
@@ -35,3 +31,4 @@
 <% content_for :head do %>
   <%= javascript_include_tag 'product' %>
 <% end %>
+

@@ -3,7 +3,7 @@
   <% %w(accessories women girls boys).each do |cat| %>
     <li><%= link_to cat.titleize, "/t/categories/#{cat}", :class => ('active' if @taxon && cat == @taxon.name.downcase) %></li>
   <% end %>
-  <li>FAQ</li>
-  <li><%=link_to "About", "/bio.html" %></li>
-  <li>Contact</li>
+  <li><%=link_to "FAQ", "/faq",:class => ('active' if @page && 'FAQ' == @page.title)%></li>
+  <li><%=link_to "About", "/about", :class => ('active' if @page && 'About' == @page.title) %></li>
+  <li><%=link_to "Contact", "/contact", :class => ('active' if @page && 'Contact' == @page.title) %></li>
 </ul>
