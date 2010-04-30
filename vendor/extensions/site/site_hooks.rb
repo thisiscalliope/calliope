@@ -42,4 +42,5 @@ class SiteHooks < Spree::ThemeSupport::HookListener
   #replace :homepage_products, :text => '<h1>Welcome!</h1>'
   #remove :homepage_sidebar_navigation
   remove :language_bar
+  remove :cart_item_image
 end

@@ -12,10 +12,4 @@ test:
   database: db/test.sqlite3.db
 
 production:
-  encoding: utf8
-  adapter: mysql
-  database: this_is_calliope
-  host: mysql.thisiscalliope.com
-  username: thisiscalliope
-  password: change_me
-  socket: /tmp/mysql.sock
+

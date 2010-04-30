@@ -26,7 +26,7 @@ OrdersController.class_eval do
     end if params[:option_values]
 
     if quantity > 0 && variant
-      if quantity > variant.on_hand
+      if quantity > variant.on_hand and not Spree::Config[:allow_backorders]
         flash[:error] = t(:stock_to_small) % [variant.on_hand]
       else
         @order.add_variant(variant, quantity)
