@@ -20,7 +20,7 @@
           v.images.each do |i| %>
             <li>
               <%= link_to(image_tag(i.attachment.url(:mini)), i.attachment.url(:product)) %>
-              <div style='display:none' class='meta'><%= variant_options v %></div>
+	      <div style='display:none' class='meta'><%= v.fabric_name %></div>
             </li>
         <% end %>
       <% end %>

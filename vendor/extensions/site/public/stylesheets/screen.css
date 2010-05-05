@@ -936,7 +936,7 @@ div#checkout #payment-methods li.last {
 }
 
 div#shop-now {
-  margin-left: 80px;
+  margin-left: 5px;
   margin-top: 315px;
   width: 111px;
   height: 27px;
@@ -950,4 +950,19 @@ a#shop-now-button {
 }
 a#shop-now-button:hover {
   background: url('/images/btn_shop_over.gif') no-repeat;
+}
+div#main-home 
+{
+  float: left;
+  margin-left: 280px;
+  margin-top: -335px;  
+  width: 350px;
+  height: 500px;
+}
+a#main-home-image {
+  display: block;
+  text-decoration: none;
+  background: url('/images/main_home.jpg') no-repeat;
+  width: 350px;
+  height: 500px;
 }
