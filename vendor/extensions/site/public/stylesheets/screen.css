@@ -272,6 +272,10 @@ div.container#wrapper_home {
   background: #000000 url(../images/bg_home.jpg) top center no-repeat;
 }
 
+div.container#wrapper_long {
+  height: 900px;
+}
+
 #sidebar {
   display: inline;
   float: left;
@@ -954,15 +958,8 @@ a#shop-now-button:hover {
 div#main-home 
 {
   float: left;
-  margin-left: 280px;
-  margin-top: -335px;  
-  width: 350px;
-  height: 500px;
-}
-a#main-home-image {
-  display: block;
-  text-decoration: none;
-  background: url('/images/main_home.jpg') no-repeat;
-  width: 350px;
-  height: 500px;
+  margin-left: 40px;
+  margin-top: 10px;  
+  width: 700px;
+  height: 600px;
 }
