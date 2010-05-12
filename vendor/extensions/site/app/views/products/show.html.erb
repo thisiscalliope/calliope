@@ -13,7 +13,6 @@
   <% hook :product_description do %>
     <%= product_description(@product) rescue t("product_has_no_description") %>
   <% end %>
-  <p class='prices'><%= product_price(@product) %></p>
   <% if @product.has_variants? %>  
     <ul id="variant-thumbnails" class="thumbnails">
       <% @variants.select { |v| v.available? }.each do |v|
