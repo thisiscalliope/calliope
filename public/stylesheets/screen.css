@@ -16,7 +16,7 @@ body {
   line-height: 1.5;
   font-family: 'Georgia', serif;
   color: #532720;
-  font-size: 75%;
+  font-size: 100%;
 }
 ol, ul { list-style: none; }
 table {
@@ -285,16 +285,16 @@ div.container#wrapper_long {
   list-style: none;
 }
 #sidebar ul li {
-  padding: 6px 0;
+  padding: 3px 0;
 }
 #sidebar ul li a {
   font-family: 'Georgia', serif;
   color: #532720;
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
 }
 #sidebar ul li a:hover, #sidebar ul li a.active  {
-  color: #11a4c6;
+  color: #D49492;
 }
 #sidebar h3 { margin-bottom: 0.5em; }
 body.one-col #content {
@@ -429,7 +429,6 @@ ul#language-bar strong { font-weight: normal; }
 ul#nav-bar {
   line-height: 50px;
   float: right;
-  font-size: 1.2em;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -499,7 +498,7 @@ ul#nav-bar li.cart-indicator a.full { background-image: url(../images/cart-full_
   border: 1px solid #99aacc;
 }
 .flash.errors {
-  background: #f4b4b4 url(../images/shadow_top.png) 0px -50px repeat-x;
+  background: #FFC8BF url(../images/shadow_top.png) 0px -50px repeat-x;
   color: #000000;
   border: 1px solid #000000;
 }
@@ -510,7 +509,7 @@ ul#nav-bar li.cart-indicator a.full { background-image: url(../images/cart-full_
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background: #f4b4b4 url(../images/shadow_top.png) 0px -50px repeat-x;
+  background: #FFC8BF url(../images/shadow_top.png) 0px -50px repeat-x;
   color: #000000;
   border: 1px solid #000000;
 }
@@ -528,7 +527,7 @@ ul#nav-bar li.cart-indicator a.full { background-image: url(../images/cart-full_
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background: #f4b4b4 url(../images/shadow_top.png) 0px -50px repeat-x;
+  background: #FFC8BF url(../images/shadow_top.png) 0px -50px repeat-x;
   color: #000000;
   border: 1px solid #000000;
 }
@@ -697,6 +696,9 @@ ul.thumbnails li.selected { border-color: #999999; }
   margin: 0;
   padding: 0;
 }
+#cart-button-add {
+ top 3px;
+}
 #product-images {
   display: inline;
   float: left;
@@ -722,17 +724,17 @@ ul.thumbnails li.selected { border-color: #999999; }
 }
 #product-description p {
   color: #532720;
-  font-size: 11px;
+  font-size: 12px;
 }
 #product-description h1 {
   font-family: 'Georgia', serif;
   color: #532720;
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 23px;
   font-weight: bold;
 }
 #product-description .prices {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: bold;
 }
 #cart-form {
@@ -851,19 +853,19 @@ ol.progress-steps li a {
 }
 ol.progress-steps li.current-first span { padding-left: 14px; }
 ol.progress-steps li.completed-first span { padding-left: 14px; }
-ol.progress-steps li.current-first { background-image: url(../images/step-progress/current-first.gif); }
-ol.progress-steps li.completed-first { background-image: url(../images/step-progress/completed-first.gif) !important; }
+ol.progress-steps li.current-first { background-image: url(../images/step-progress/current-first.png); }
+ol.progress-steps li.completed-first { background-image: url(../images/step-progress/completed-first.png) !important; }
 ol.progress-steps li.current { color: #ffffff; }
 ol.progress-steps li.current-first { color: #ffffff; }
 ol.progress-steps li.current-last { color: #ffffff; }
-ol.progress-steps li.completed { background-image: url(../images/step-progress/completed-completed.gif); }
-ol.progress-steps li.current { background-image: url(../images/step-progress/completed-current.gif); }
-ol.progress-steps li.current-last { background-image: url(../images/step-progress/completed-current.gif); }
-ol.progress-steps li.next { background-image: url(../images/step-progress/current-incomplete.gif); }
-ol.progress-steps li.next-last { background-image: url(../images/step-progress/current-incomplete.gif); }
-ol.progress-steps li.last span { background-image: url(../images/step-progress/incomplete-right.gif); }
-ol.progress-steps li.next-last span { background-image: url(../images/step-progress/incomplete-right.gif); }
-ol.progress-steps li.current-last span { background-image: url(../images/step-progress/current-right.gif); }
+ol.progress-steps li.completed { background-image: url(../images/step-progress/completed-completed.png); }
+ol.progress-steps li.current { background-image: url(../images/step-progress/completed-current.png); }
+ol.progress-steps li.current-last { background-image: url(../images/step-progress/completed-current.png); }
+ol.progress-steps li.next { background-image: url(../images/step-progress/current-incomplete.png); }
+ol.progress-steps li.next-last { background-image: url(../images/step-progress/current-incomplete.png); }
+ol.progress-steps li.last span { background-image: url(../images/step-progress/incomplete-right.png); }
+ol.progress-steps li.next-last span { background-image: url(../images/step-progress/incomplete-right.png); }
+ol.progress-steps li.current-last span { background-image: url(../images/step-progress/current-right.png); }
 div#checkout { position: relative; }
 div#checkout .progress-steps {
   position: absolute;

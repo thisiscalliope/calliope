@@ -20,11 +20,10 @@
     <%= text_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"),
       1, :class => "title", :size => 3 %>
     &nbsp;
-    <%= image_submit_tag '/images/btn_addtocart.gif' %>
+    <%= image_submit_tag ("/images/btn_addtocart.gif", :id => "cart-button-add" )%>
   <% else %>
     <%= content_tag('strong', t('out_of_stock')) %>
   <% end %>
-
 <% end %>
 <% end %>
 
