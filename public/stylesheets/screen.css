@@ -527,9 +527,7 @@ ul#nav-bar li.cart-indicator a.full { background-image: url(../images/cart-full_
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background: #FFC8BF url(../images/shadow_top.png) 0px -50px repeat-x;
-  color: #000000;
-  border: 1px solid #000000;
+  border: 1px solid #532720;
 }
 .errorExplanation p { margin: 0px; }
 .errorExplanation ul { margin-bottom: 0px; }
@@ -837,7 +835,7 @@ ol.progress-steps li {
   float: left;
   background-position: top left;
   background-repeat: no-repeat;
-  background-image: url(../images/step-progress/incomplete-incomplete.gif);
+  background-image: url(../images/step-progress/incomplete-incomplete.png);
 }
 ol.progress-steps li span {
   padding: 5px 14px 7px 24px;
@@ -875,8 +873,8 @@ div#checkout form {
   background-position: top right;
   background-repeat: no-repeat;
 }
-div#checkout #checkout_form_address { background-image: url("../images/steps/2.png"); }
-div#checkout #checkout_form_delivery { background-image: url("../images/steps/3.png"); }
+div#checkout #checkout_form_address {  }
+div#checkout #checkout_form_delivery {  }
 div#checkout #checkout_form_address #billing label {
   width: 190px;
   float: left;
@@ -906,7 +904,7 @@ div#checkout #checkout_form_address #shipping p.checkbox label {
 }
 div#checkout #checkout_form_address #billing p.checkbox input { width: auto !important; }
 div#checkout #checkout_form_address #shipping p.checkbox input { width: auto !important; }
-div#checkout #checkout_form_payment { background-image: url("../images/steps/5.png"); }
+div#checkout #checkout_form_payment {}
 div#checkout #checkout_form_payment select { width: 75px; }
 div#checkout #checkout_form_payment #payment {
   display: inline;
