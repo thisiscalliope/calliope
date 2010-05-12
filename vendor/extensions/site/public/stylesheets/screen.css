@@ -835,7 +835,6 @@ ol.progress-steps li {
   list-style: none;
   display: block;
   float: left;
-  color: #999999;
   background-position: top left;
   background-repeat: no-repeat;
   background-image: url(../images/step-progress/incomplete-incomplete.gif);
@@ -849,7 +848,7 @@ ol.progress-steps li span {
 }
 ol.progress-steps li a {
   text-decoration: none;
-  color: #333333;
+  color: #FFFFFF;
 }
 ol.progress-steps li.current-first span { padding-left: 14px; }
 ol.progress-steps li.completed-first span { padding-left: 14px; }
