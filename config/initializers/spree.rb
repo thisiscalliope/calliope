@@ -54,6 +54,3 @@ require 'spree/theme_support'
 require 'state_machine'
 require 'stringex'
 require 'will_paginate'
-
-Spree::Config.set(:allow_ssl_in_production => false)
-
