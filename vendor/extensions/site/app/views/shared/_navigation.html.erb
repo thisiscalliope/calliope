@@ -1,6 +1,6 @@
 <ul>
   <li><%= link_to "Headbands", "/products/headband", :class => ('active' if @product && 'headband' == @product.name.downcase) %></li>
-  <% %w(accessories women girls boys).each do |cat| %>
+  <% %w(girls women boys accessories).each do |cat| %>
     <li><%= link_to cat.titleize, "/t/categories/#{cat}", :class => ('active' if @taxon && cat == @taxon.name.downcase) %></li>
   <% end %>
   <li><%=link_to "Sizing Chart", "/sizing", :class => ('active' if @page && 'Sizing Chart' == @page.title) %></li>

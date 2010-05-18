@@ -2,4 +2,3 @@ log/*.log
 tmp/**/*
 *~
 config/*.yml
-public/**/*
